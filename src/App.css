@@ -2,5 +2,27 @@
   position: absolute;
   top: 50px;
   left: 50px;
-  background-color: white;
+  color: black;
+  background-color: rgb(201, 199, 199);
+  border-radius: 5px;
+  padding: 10px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+input {
+  margin-top: 10px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+#title {
+  position:absolute;
+  left: 40%;
+  top: 5%;
+  font-size: 40px;
+  font-style: bold;
+  color: white;
 }
