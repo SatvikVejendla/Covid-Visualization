@@ -25,7 +25,7 @@ export default class App extends React.Component {
     let covid_data;
     fetch(covid_file).then(res => res.text()).then(b => {
 
-      b = b.split("\r\n");
+      b = b.split("\n");
       for(let i = 0; i < b.length; i++){
         b[i] = b[i].split(",")
       }
@@ -44,10 +44,10 @@ export default class App extends React.Component {
       this.state.globe.polygonAltitude((x) => {
         const name = x.properties.name;
 
-        const country_data = covid_data.filter((x) => {
+        let country_data = covid_data.filter((x) => {
           if(x[0] === "US" && name === "United States of America"){ return true; }
           return x[0] === name;
-        })[0]
+        })[0];
 
 
         if(country_data){
